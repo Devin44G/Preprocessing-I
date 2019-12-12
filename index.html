@@ -1,19 +1,106 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>My Resume</title>
 
+  <script src="https://kit.fontawesome.com/272bd0e30a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/index.css">
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <!-- NAV BAR -->
+  <nav class="navbar">
+    <a href="#about">about me</a>
+    <a href="#skills">skills</a>
+    <a href="#history">work history</a>
+    <a href="#contact">contact</a>
+  </nav>
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <!-- Header Section -->
+    <header class="header-content">
+      <h1>Devin Graham</h1>
+      <p id="intro">&lt Full Stack Developer /&gt</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2>about me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ipsam magni, quae hic nam cupiditate cumque tempora officiis, numquam quia molestiae accusantium dolores aliquid et obcaecati maiores ex sint odio.</p>
+    </section>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <h2>what i know*</h2>
+      <div class="skill-table">
+        <!-- Front End Skills -->
+        <div class="frontend">
+          <h3>Front End</h3>
+          <ul class="frontend-skills">
+            <li class="marg bord-bott">HTML/HTML5</li>
+            <li class="bord-bott">CSS/CSS3</li>
+            <li class="marg bord-bott">Basic UI Principles</li>
+            <li class="bord-bott">LESS</li>
+            <li class="marg">JavaScript</li>
+          </ul>
+        </div>
+        <!-- Back End Skills -->
+        <div class="backend">
+          <h3>Back End</h3>
+          <ul class="backend-skills">
+            <li class="marg bord-bott">JavaScript/Node.js</li>
+            <li class="bord-bott">C++</li>
+            <li class="marg bord-bott">Java</li>
+            <li class="bord-bott">Python</li>
+            <li class="marg">PHP</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Work History Section -->
+    <section class="work-history" id="history">
+      <h2>work / educational history</h2>
+      <div class="history-table">
+        <div class="work-headings">
+          <h3>Mos/Yrs</h3>
+          <h3>Company</h3>
+          <h3>Title</h3>
+          <h3>Req. Skills</h3>
+        </div>
+        <!-- Lambda School -->
+        <div class="jobs">
+          <p>9 mos</p>
+          <p>Lambda School</p>
+          <p>Student</p>
+          <p>Learning</p>
+        </div>
+        <!-- Old Navy -->
+        <div class="jobs">
+          <p>5 yrs</p>
+          <p>Old Navy</p>
+          <p>Shipment Lead</p>
+          <p>Leadership</p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>like what you see?</h2>
+      <div class="contact-links">
+        <a href="https://github.com/Devin44G" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:devin.mikhail.graham@gmail.com" target="_blank"><i class="fas fa-at"></i></a>
+        <a href="https://devin44g.github.io/" target="_blank">WWW</a>
+      </div>
+    </section>
+  </div>
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p class="copyright">&copy The Fantastical Mister Graham</p>
+  </footer>
 </body>
+
 </html>
