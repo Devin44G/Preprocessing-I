@@ -3,11 +3,25 @@
    License: none (public domain)
 */
 @font-face {
-  font-family: 'Gelasio';
+  font-family: 'Concert One';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Gelasio Regular'), local('Gelasio-Regular'), url(https://fonts.gstatic.com/s/gelasio/v1/cIf9MaFfvUQxTTqS9C6hZA.ttf) format('truetype');
+  src: local('Concert One'), local('ConcertOne-Regular'), url(https://fonts.gstatic.com/s/concertone/v10/VEM1Ro9xs5PjtzCu-srDqSTijPs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Odibee Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Odibee Sans Regular'), local('OdibeeSans-Regular'), url(https://fonts.gstatic.com/s/odibeesans/v1/neIPzCSooYAho6WvjeToRbk1cJU.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Press Start 2P Regular'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v8/e3t4euO8T-267oIAQAu6jDQyK3nVivY.ttf) format('truetype');
 }
 html,
 body,
@@ -136,11 +150,361 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  margin: 0;
 }
-html,
-body {
-  height: 100%;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
-body {
-  font-family: 'Gelasio';
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+h1 {
+  color: #F0FFF0;
+  font-size: 6rem;
+  font-family: 'Odibee Sans', cursive;
+  text-shadow: -1px -1px 0 #2F4F4F, 1px -1px 0 #2F4F4F, -1px 1px 0 #2F4F4F, 1px 1px 0 #2F4F4F;
+}
+h2 {
+  color: #2F4F4F;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 2.5rem;
+  font-variant: small-caps;
+}
+h3 {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 2.5rem;
+}
+p,
+ul,
+ol {
+  font-size: 2rem;
+}
+#intro {
+  font-family: 'Press Start 2P', cursive;
+}
+a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-variant: small-caps;
+  color: #2F4F4F;
+}
+a:hover {
+  color: #8FBC8F;
+}
+nav {
+  padding: 2rem 0;
+  text-align: right;
+  width: 95%;
+}
+nav a {
+  padding: 0.5rem;
+}
+html {
+  background-color: #F0FFF0;
+  /*///// ABOUT SECTION \\\\\*/
+  /*///// SKILLS SECTION \\\\\*/
+  /*///// WORK HISTORY SECTION \\\\\*/
+  /*///// CONTACT SECTION \\\\\*/
+  /*///// FOOTER \\\\\*/
+}
+html .main-content {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: solid 2px #2F4F4F;
+}
+html header {
+  height: 60vh;
+  padding: 10%;
+  background: linear-gradient(60deg, #8FBC8F, #2F4F4F);
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  border-bottom: solid 2px #2F4F4F;
+}
+@media (max-width: 61.25em) {
+  html header {
+    padding: 10% 2%;
+  }
+}
+@media (max-width: 45em) {
+  html header {
+    padding: 10% 0.2rem;
+  }
+}
+html header h1,
+html header p {
+  position: absolute;
+}
+html header h1 {
+  letter-spacing: 5px;
+}
+html header p {
+  padding-top: 20rem;
+  font-size: 1.5rem;
+}
+html .about {
+  height: 60vh;
+  padding: 10%;
+  border-bottom: solid 1px #2F4F4F;
+}
+@media (max-width: 61.25em) {
+  html .about {
+    padding: 10% 2%;
+  }
+}
+@media (max-width: 45em) {
+  html .about {
+    padding: 10% 0.2rem;
+  }
+}
+html .about h2 {
+  padding-bottom: 2rem;
+}
+html .about p {
+  line-height: 1.5;
+}
+@media (max-width: 45em) {
+  html .about {
+    text-align: center;
+    padding: 10% 0.2rem;
+  }
+}
+html .skills {
+  height: 60vh;
+  padding: 10%;
+  text-align: left;
+  border-bottom: solid 1px #2F4F4F;
+}
+@media (max-width: 61.25em) {
+  html .skills {
+    padding: 10% 2%;
+  }
+}
+@media (max-width: 45em) {
+  html .skills {
+    padding: 10% 0.2rem;
+  }
+}
+@media (max-width: 45em) {
+  html .skills {
+    text-align: center;
+  }
+}
+html .skills .frontend {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+@media (max-width: 61.25em) {
+  html .skills .frontend {
+    width: 100%;
+  }
+}
+html .skills .frontend .frontend-skills {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border: solid 2px black;
+}
+html .skills .frontend .frontend-skills li {
+  width: 50%;
+  padding: 0.5rem;
+}
+html .skills .frontend .frontend-skills .marg {
+  border-right: solid 1px black;
+}
+html .skills .frontend .frontend-skills .bord-bott {
+  border-bottom: solid 1px black;
+}
+html .skills .backend {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 2rem;
+}
+@media (max-width: 61.25em) {
+  html .skills .backend {
+    width: 100%;
+  }
+}
+html .skills .backend .backend-skills {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border: solid 2px black;
+}
+html .skills .backend .backend-skills li {
+  width: 50%;
+  padding: 0.5rem;
+}
+html .skills .backend .backend-skills .marg {
+  border-right: solid 1px black;
+}
+html .skills .backend .backend-skills .bord-bott {
+  border-bottom: solid 1px black;
+}
+html .work-history {
+  height: 60vh;
+  padding: 10%;
+  text-align: left;
+  border-bottom: solid 1px #2F4F4F;
+}
+@media (max-width: 61.25em) {
+  html .work-history {
+    padding: 10% 2%;
+  }
+}
+@media (max-width: 45em) {
+  html .work-history {
+    padding: 10% 0.2rem;
+  }
+}
+@media (max-width: 45em) {
+  html .work-history {
+    text-align: center;
+  }
+}
+html .work-history .history-table {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+@media (max-width: 61.25em) {
+  html .work-history .history-table {
+    width: 100%;
+  }
+}
+html .work-history .history-table .work-headings {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+  border: solid 2px black;
+}
+@media (max-width: 61.25em) {
+  html .work-history .history-table .work-headings {
+    width: 100%;
+  }
+}
+html .work-history .history-table .jobs {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+}
+@media (max-width: 61.25em) {
+  html .work-history .history-table .jobs {
+    width: 100%;
+  }
+}
+html .work-history .history-table .jobs p {
+  width: 225px;
+  padding: 0.5rem;
+  border: solid 1px black;
+}
+html .contact {
+  height: 60vh;
+  padding: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: solid 1px #2F4F4F;
+}
+@media (max-width: 61.25em) {
+  html .contact {
+    padding: 10% 2%;
+  }
+}
+@media (max-width: 45em) {
+  html .contact {
+    padding: 10% 0.2rem;
+  }
+}
+html .contact .contact-links {
+  font-family: 'Concert One', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html .contact .contact-links a {
+  font-size: 4rem;
+  width: 150px;
+  margin: 3rem 0 0;
+  color: black;
+}
+html .contact .contact-links a:hover {
+  color: #8FBC8F;
+}
+html footer {
+  height: 60vh;
+  padding: 10%;
+  text-align: center;
+  height: 10vh;
+}
+@media (max-width: 61.25em) {
+  html footer {
+    padding: 10% 2%;
+  }
+}
+@media (max-width: 45em) {
+  html footer {
+    padding: 10% 0.2rem;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+  html .main-content {
+    width: 90%;
+  }
+}
+@media (max-width: 45em) {
+  html {
+    font-size: 56%;
+  }
+  html .main-content {
+    width: 100%;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  #intro {
+    font-size: 1.2rem;
+  }
+  a {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 28.75em) {
+  html {
+    font-size: 54%;
+  }
 }

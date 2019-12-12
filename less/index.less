@@ -3,8 +3,11 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
 
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Odibee+Sans|Press+Start+2P&display=swap');
+
+// BASE RESET
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,14 +55,332 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+		margin: 0;
 }
 
-html, body {
-    height: 100%;
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
-@main-font: 'Gelasio';
+// COLOR VARIABLES
+@pageColor: #F0FFF0;
+@headerColor: #8FBC8F;
+@accentColor: #2F4F4F;
 
-body {
-	font-family: @main-font;
+// MIXINS
+.blockDisplay() {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+}
+.sectionFormat() {
+	height: 60vh;
+	padding: 10%;
+
+	@media (max-width: 61.25em) {
+		padding: 10% 2%;
+	}
+	@media (max-width: 45em){
+		padding: 10% .2rem;
+	}
+}
+.outerSkillsFormat() {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	width: 80%;
+	margin-left: 50%;
+	transform: translate(-50%);
+	margin-bottom: 2rem;
+
+	@media (max-width: 61.25em) {
+		width: 100%;
+	}
+}
+.innerSkillsFormat() {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	border: solid 2px black;
+}
+.innerLi() {
+	width: 50%;
+	padding: .5rem;
+}
+
+// BASIC FORMATTING / STYLING
+h1, h2, h3 {
+	font-weight: bold;
+}
+h1 {
+	color: @pageColor;
+	font-size: 6rem;
+	font-family: 'Odibee Sans', cursive;
+	text-shadow:
+		-1px -1px 0 @accentColor,
+		1px -1px 0 @accentColor,
+		-1px 1px 0 @accentColor,
+		1px 1px 0 @accentColor;
+}
+h2 {
+	color: @accentColor;
+	font-family: 'Odibee Sans', cursive;
+	font-size: 2.5rem;
+	font-variant: small-caps;
+}
+h3 {
+	font-family: 'Odibee Sans', cursive;
+	font-size: 2.5rem;
+}
+p, ul, ol {
+	font-size: 2rem;
+}
+#intro {
+	font-family: 'Press Start 2P', cursive;
+}
+a {
+	font-size: 2.5rem;
+	text-decoration: none;
+	font-variant: small-caps;
+	color: @accentColor;
+}
+a:hover {
+	color: @headerColor;
+}
+nav {
+	padding: 2rem 0;
+	text-align: right;
+	width: 95%;
+
+	a {
+		padding: .5rem;
+	}
+}
+
+// SECTIONS FORMATTING
+html {
+	background-color: @pageColor;
+
+	.main-content {
+		.blockDisplay();
+		border: solid 2px @accentColor;
+	}
+	header {
+		.sectionFormat();
+		background: linear-gradient(60deg, @headerColor, @accentColor);
+		height: 100vh;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	  align-items: center;
+		letter-spacing: 2px;
+		border-bottom: solid 2px @accentColor;
+
+			h1, p {
+				position: absolute;
+			}
+			h1 {
+				letter-spacing: 5px;
+			}
+			p {
+				padding-top: 20rem;
+				font-size: 1.5rem;
+			}
+	}
+	/*///// ABOUT SECTION \\\\\*/
+	.about {
+		.sectionFormat();
+		border-bottom: solid 1px @accentColor;
+
+		h2 {
+			padding-bottom: 2rem;
+		}
+		p {
+			line-height: 1.5;
+		}
+
+		// Media Query
+		@media (max-width: 45em) {
+			text-align: center;
+			padding: 10% .2rem;
+		}
+	}
+	/*///// SKILLS SECTION \\\\\*/
+	.skills {
+		.sectionFormat();
+		text-align: left;
+		border-bottom: solid 1px @accentColor;
+
+		// Media Query
+		@media (max-width: 45em) {
+			text-align: center;
+		}
+
+		.frontend {
+			.outerSkillsFormat();
+			padding-top: 2rem;
+
+			.frontend-skills {
+				.innerSkillsFormat();
+
+				li {
+					.innerLi();
+				}
+				.marg {
+					border-right: solid 1px black;
+				}
+				.bord-bott {
+					border-bottom: solid 1px black;
+				}
+			}
+		}
+		.backend {
+			.outerSkillsFormat();
+
+			.backend-skills {
+				.innerSkillsFormat();
+
+				li {
+					.innerLi();
+				}
+				.marg {
+					border-right: solid 1px black;
+				}
+				.bord-bott {
+					border-bottom: solid 1px black;
+				}
+			}
+		}
+	}
+	/*///// WORK HISTORY SECTION \\\\\*/
+	.work-history {
+		.sectionFormat();
+		text-align: left;
+		border-bottom: solid 1px @accentColor;
+
+		// Media Query
+		@media (max-width: 45em) {
+			text-align: center;
+		}
+
+		.history-table {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 2rem;
+
+			// Media Query
+			@media (max-width: 61.25em) {
+				width: 100%;
+			}
+
+			.work-headings {
+				width: 80%;
+				display: flex;
+				justify-content: space-around;
+				padding: .5rem;
+				border: solid 2px black;
+
+				// Media Query
+				@media (max-width: 61.25em) {
+					width: 100%;
+				}
+			}
+			.jobs {
+				width: 80%;
+				display: flex;
+				justify-content: space-around;
+				border-right: solid 1px black;
+				border-left: solid 1px black;
+
+				// Media Query
+				@media (max-width: 61.25em) {
+					width: 100%;
+				}
+
+				p {
+					width: 225px;
+					padding: .5rem;
+					border: solid 1px black;
+				}
+			}
+		}
+	}
+	/*///// CONTACT SECTION \\\\\*/
+	.contact {
+		.sectionFormat();
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-bottom: solid 1px @accentColor;
+
+		.contact-links {
+			font-family: 'Concert One', cursive;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			a {
+				font-size: 4rem;
+				width: 150px;
+				margin: 3rem 0 0;
+				color: black;
+			}
+			a:hover {
+				color: @headerColor;
+			}
+		}
+	}
+	/*///// FOOTER \\\\\*/
+	footer {
+		.sectionFormat();
+		text-align: center;
+		height: 10vh;
+	}
+}
+
+
+// MEDIA QUERIES
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+	html .main-content {
+		width: 90%;
+	}
+}
+
+@media (max-width: 45em) {
+  html {
+    font-size: 56%;
+  }
+	html .main-content {
+		width: 100%;
+	}
+	h1 {
+		font-size: 5rem;
+	}
+	#intro {
+		font-size: 1.2rem;
+	}
+	a {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 54%;
+  }
 }
